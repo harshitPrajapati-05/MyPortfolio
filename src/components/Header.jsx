@@ -10,8 +10,6 @@ const Header = (
   }
   ) => {
     const toMaker = to => { return `/${to.toString().toLowerCase()}` } ;
-    const path = `${window.location.pathname}` 
-    React.useEffect(()=>{console.log(window.location.pathname)},[path])
   return (   
     <>
     <div className={`flex flex-wrap  justify-between h-min mt-0 w-auto  font-mono bg-black text-white`}>
