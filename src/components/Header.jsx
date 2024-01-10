@@ -14,7 +14,7 @@ const Header = (
     <>
     <div className={`flex flex-wrap  justify-between h-min mt-0 w-full font-mono bg-black text-white`}>
     <div className='flex flex-wrap`'  id='imgg'>
-    <ImgLoader src="../../hars.JPG" alt="nice facing some trouble" name={name} descp={descp} className={`h-[4.5rem] rounded-full m-[0.75rem]
+    <ImgLoader src="../../hars.jpg" alt="nice facing some trouble" name={name} descp={descp} className={`h-[4.5rem] rounded-full m-[0.75rem]
       focus-within:animate-none  animate-pulse`}/>
     
     </div>
