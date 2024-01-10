@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import ImgLoader from './ImgLoader';
-
 const Header = (
   {
     name=" Harshit A Prajapati",
@@ -13,10 +12,9 @@ const Header = (
   return (   
     <>
     <div className={`flex flex-wrap  justify-between h-min mt-0 w-full font-mono bg-black text-white`}>
-    <div className='flex flex-wrap`'  id='imgg'>
-    <img src="../../hars.jpg" alt="nice facing some trouble" name={name} className={`h-[4.5rem] rounded-full m-[0.75rem]
-      focus-within:animate-none  animate-pulse`}/>
-    
+    <div className='flex flex-wrap font-mono text-[#F5AC0C]'  id='imgg'>
+    <h1>{name}</h1>
+    <h1>{descp} </h1>
     </div>
     <ul className={`flex flex-wrap gap-[1.75rem]`}>
     {contexts.map((context ,index)=>(
