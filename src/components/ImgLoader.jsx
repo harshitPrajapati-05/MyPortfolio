@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 
-const ImgLoader = ({ src="../assets/hars.jpg", alt, className ,name, descp }) => {
+const ImgLoader = ({ src, alt, className ,name, descp }) => {
   const [isOnline, setIsOnline] = useState(true);
 
   useEffect(() => {
