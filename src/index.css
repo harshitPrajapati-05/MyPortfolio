@@ -32,3 +32,24 @@ body {
   .animate-bounce1{
     animation: bounce .9999s   .09s infinite;
   }
+
+.popup{
+
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width:11rem;
+  text-align: center;
+  background:black;
+  color: #F5AC0E;
+  align-items: center;
+}
+
+.popup:hover{
+
+  border: #F5AC0E 0.124rem solid ;
+}
+
+.popup i{
+  font-size: x-large;
+}

@@ -6,9 +6,13 @@ import Form from './Form'
 
 const Layout = () => {
   const [isOnline, setIsOnline] = React.useState(true)
-  const nameS = useSelector(s=>s.user.name)
+  const navigate = useNavigate();
+  const name= useSelector(s=>s.user.name)
 
-  const empty =()=> nameS === '';
+
+  const isEmpty = React.useCallback(() => name === '', [name])
+  
+
 
   React.useEffect(()=>{
     const handleOnlineStatusChange =()=> setIsOnline(navigator.onLine);
@@ -33,7 +37,7 @@ const Layout = () => {
     isOnline? 
     <>
     <Header/><div className='h-screen flex '>
-      {empty()?<Form isOn={true}/>:<Outlet/>}
+      {isEmpty()?<Form isOn={true}/>:<Outlet/>}
       </div><Footer/> 
     </>
       :

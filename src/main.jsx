@@ -8,6 +8,9 @@ import { Provider } from 'react-redux';
 import store from './store/store';
   
 
+const body = document.body ;
+body.style.backgroundColor="#F5AC0E"
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>

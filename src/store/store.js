@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "./userSlice";
+import colorSlice from "./colorSlice";
 
 
 const store = configureStore({
     reducer:{
-        user: userSlice
+        user: userSlice,
+        color:colorSlice,
     }
 })
 
