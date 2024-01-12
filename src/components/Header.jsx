@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import ImgLoader from './ImgLoader'
+import { useSelector } from 'react-redux';
 const Header = (
   {
     name=" Harshit A Prajapati",
@@ -9,18 +10,16 @@ const Header = (
   }
   ) => {
     const toMaker = to => { return `/${to.toString().toLowerCase()}` } ;
+    const userName = useSelector(state=>state.user.name)
+    
 
   return (   
     <>
     <div className={`flex flex-wrap  justify-between h-min mt-0 w-full font-mono bg-black text-white`}>
-    <div className='flex  font-mono text-[#F5AC0C]  m-2'  id='imgg'>
-    <ImgLoader src={`../hars.jpg`} className={`h-20 rounded-full`}/>
-    <div className='flex items-center'>
+    <div className='flex  font-mono text-[#F5AC0C]  m-2'>
     <Link to="https://www.instagram.com/harshit_prajapati04/">
-    <h1 >{name}</h1>
-    <h1>{descp}</h1>
+    {userName!==""?<ImgLoader src={`../hars.jpg`} className={`h-20 rounded-full`} name={name} descp={descp}/>:<ImgLoader src={`#`} alt='user not found'/>}
     </Link>
-    </div>
     </div>
     <ul className={`flex flex-wrap gap-[1.75rem]`}>
     {contexts.map((context ,index)=>(

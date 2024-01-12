@@ -18,13 +18,35 @@ const ImgLoader = ({ src, alt, className ,name, descp }) => {
     };
   }, []);
 
+  const imageDiv = document.getElementById("profileImg");
+  const popUp = document.createElement("span");
+  popUp.innerHTML='<i class="ri-arrow-up-circle-line"></i><h3>Click  for Social Media </h3>'
+  popUp.id = "popUp";
+
+  imageDiv?.addEventListener("mouseenter", () => {
+    if (!document.body.contains(popUp)) {
+      document.body.append(popUp);
+      for(let i =2 ;i< 5 ;i++){
+      const spans=  document.querySelectorAll("span")
+
+      i<spans.length?spans[i].remove():null;
+      }
+      setTimeout(() => {
+        popUp.remove();
+      }, 10000);
+    }
+  });
+  
+
 
   return isOnline ? (
     <>
-    <img src={src}  id='hey' alt={alt} className={className} />
-    <div className='mt-[1.5rem] animate-pulse focus:animate-none transition-all hover: text-[#F5AC0E] '>
+    <div className='mt-1 animate-pulse  flex  flex-focus:animate-none transition-all hover: text-[#F5AC0E] ' id='profileImg'>
+    <img src={src}  alt={alt} className={className} />
+    <span className='flex flex-col justify-center'>
     <h2 >{name}</h2>
     <h3>{descp}</h3>
+    </span>
     </div>
     </>
   ) : (

@@ -45,12 +45,26 @@ body {
   align-items: center;
 }
 
-.popup:hover{
 
-  border: #F5AC0E 0.124rem solid ;
+#popUp{
+  font-family: monospace;
+  width: 9.6rem;
+  height:max-content;
+  text-align: center ;
+  flex-direction: column;
+  padding: 0px;
+  flex-wrap: wrap;
+  display: flex;
+  position: absolute;
+  background: #000;
+  color: #F5AC0e;
+  z-index: 3;
+  top: 8.5rem;
+  font-size: large;
 }
 
-.popup i{
-  font-size: x-large;
+#popUp i{
+  font-size: xx-large;
+
 }
   
