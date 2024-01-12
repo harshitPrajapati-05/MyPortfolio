@@ -10,29 +10,17 @@ const Header = (
   ) => {
     const toMaker = to => { return `/${to.toString().toLowerCase()}` } ;
 
-      
-const hoverDiv = document.getElementById("imgg");
-const div = document.createElement("div");
-
-div.className = "popup";
-div.innerHTML='<i class="ri-arrow-left-circle-line"></i><br/><h1>Click Here Me For DEv Social Media</h1>'
-hoverDiv?.addEventListener("mousemove", () => 
-{
-  !hoverDiv.contains(div)?hoverDiv.append(div):null
-  
-  setTimeout(() =>div.remove() , 4000);
-})
-
-
   return (   
     <>
     <div className={`flex flex-wrap  justify-between h-min mt-0 w-full font-mono bg-black text-white`}>
     <div className='flex  font-mono text-[#F5AC0C]  m-2'  id='imgg'>
-    <ImgLoader src={`../hars.jpg`} className={`h-5`}/>
+    <ImgLoader src={`../hars.jpg`} className={`h-20 rounded-full`}/>
+    <div className='flex items-center'>
     <Link to="https://www.instagram.com/harshit_prajapati04/">
     <h1 >{name}</h1>
     <h1>{descp}</h1>
     </Link>
+    </div>
     </div>
     <ul className={`flex flex-wrap gap-[1.75rem]`}>
     {contexts.map((context ,index)=>(
