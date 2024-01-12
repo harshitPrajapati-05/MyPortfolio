@@ -20,8 +20,9 @@ const ImgLoader = ({ src, alt, className ,name, descp }) => {
 
   const imageDiv = document.getElementById("profileImg");
   const popUp = document.createElement("span");
-  popUp.innerHTML='<i class="ri-arrow-up-circle-line"></i><h3>Click  for Social Media </h3>'
+  popUp.innerHTML=' <h1><</h1><h2>Click for Social Media </h2>'
   popUp.id = "popUp";
+  popUp.className="jello-horizontal"
 
   imageDiv?.addEventListener("mouseenter", () => {
     if (!document.body.contains(popUp)) {
@@ -33,7 +34,7 @@ const ImgLoader = ({ src, alt, className ,name, descp }) => {
       }
       setTimeout(() => {
         popUp.remove();
-      }, 10000);
+      }, 900);
     }
   });
   

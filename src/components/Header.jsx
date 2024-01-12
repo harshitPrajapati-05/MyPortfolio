@@ -15,7 +15,7 @@ const Header = (
 
   return (   
     <>
-    <div className={`flex flex-wrap  justify-between h-min mt-0 w-full font-mono bg-black text-white`}>
+    <div className={`flex flex-wrap  justify-between h-min mt-0 w-full font-mono bg-transparent text-white`}>
     <div className='flex  font-mono text-[#F5AC0C]  m-2'>
     <Link to="https://www.instagram.com/harshit_prajapati04/">
     {userName!==""?<ImgLoader src={`../hars.jpg`} className={`h-20 rounded-full`} name={name} descp={descp}/>:<ImgLoader src={`#`} alt='user not found'/>}
@@ -23,9 +23,9 @@ const Header = (
     </div>
     <ul className={`flex flex-wrap gap-[1.75rem]`}>
     {contexts.map((context ,index)=>(
-     <li   key={index} className='mt-1 mx-[1.25rem] text-lg font-bold '>
+     <li  id='icons'  key={index} className='mt-1 mx-[1.25rem] text-lg font-bold '>
       <NavLink to={toMaker(`${context}`)}
-      className={({isActive})=>`${isActive? "text-black bg-[#F5AC0E] shadow-black shadow-inner   ":"bg-black text-[#F5AC0E] hover:transition-all shadow-[3px_3px_1px_0px_rgba(245,172,14,1)]"}   hover:text-black hover:bg-[#F5AC0E] hover:transition-shadow  hover:shadow-black hover:shadow-inner flex rounded-lg p-[0.25rem] my-2`}
+      className={({isActive})=>`${isActive? "text-grey bg-transparent shadow-[1px_1px_15px_1px_rgba(146,46,227,255)]   ":"  hover:transition-all hover:shadow-[5px_5px_1px_0px_rgba(146,46,227,255)]"}   hover:text-white hover:bg-transparent transition-shadow   flex rounded-lg p-[0.25rem] my-2`}
       >@{context}</NavLink>
      </li>
     ))}

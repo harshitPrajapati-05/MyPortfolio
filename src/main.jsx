@@ -8,7 +8,7 @@ import store from './store/store';
   
 
 const body = document.body ;
-body.style.backgroundColor="#F5AC0E"
+body.className= "color-change-5x"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
