@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import ImgLoader from './ImgLoader';
+import ImgLoader from './ImgLoader'
 const Header = (
   {
     name=" Harshit A Prajapati",
@@ -28,6 +28,7 @@ hoverDiv?.addEventListener("mousemove", () =>
     <>
     <div className={`flex flex-wrap  justify-between h-min mt-0 w-full font-mono bg-black text-white`}>
     <div className='flex  font-mono text-[#F5AC0C]  m-2'  id='imgg'>
+    <ImgLoader src={`../hars.jpg`} className={`h-5`}/>
     <Link to="https://www.instagram.com/harshit_prajapati04/">
     <h1 >{name}</h1>
     <h1>{descp}</h1>
