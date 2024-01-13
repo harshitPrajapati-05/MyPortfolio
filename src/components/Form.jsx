@@ -19,15 +19,15 @@ const Form = ({isOn=true}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(newState(userData))
-    nagivate("/about")
+    nagivate("/")
 
   };
 
   return (isOn?
   <>
     <Container id={`form`} className='span'>
-      <form  onSubmit={handleSubmit} className='flex flex-col gap-5  mt-0 items-center '>
-        <h1 className='font-bold t' >COMPLETE THE FORM</h1>
+      <form  onSubmit={handleSubmit} className='flex flex-col gap-5   items-center '>
+        <h1 className='font-bold font-mono text-white' >COMPLETE THE FORM</h1>
         <Input
           type="text"
           name="name"
@@ -35,16 +35,9 @@ const Form = ({isOn=true}) => {
           onChange={handleChange}
           label="Name"
           max="25"
+          isLabel={false}
         />
-        <Input
-          type="email"
-          name="email"
-          value={userData.email}
-          onChange={handleChange}
-          label="Email"
-          max="25"
-        />
-        <Button type="submit" />
+        <Button  className='glassBox p-1'type="submit" />
       </form>
     </Container>
     </>:null 

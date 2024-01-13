@@ -1,48 +1,39 @@
-import { useEffect, useState } from 'react';
+import { IsOnline } from "../utils";
+
+
 
 
 const ImgLoader = ({ src, alt, className ,name, descp }) => {
-  const [isOnline, setIsOnline] = useState(true);
 
-  useEffect(() => {
-    const handleOnlineStatusChange = () => setIsOnline(navigator.onLine);
-
-    window.addEventListener('online', handleOnlineStatusChange);
-    window.addEventListener('offline', handleOnlineStatusChange);
-
-    handleOnlineStatusChange();
-
-    return () => {
-      window.removeEventListener('online', handleOnlineStatusChange);
-      window.removeEventListener('offline', handleOnlineStatusChange);
-    };
-  }, []);
 
   const imageDiv = document.getElementById("profileImg");
   const popUp = document.createElement("span");
   popUp.innerHTML=' <h1><</h1><h2>Click for Social Media </h2>'
   popUp.id = "popUp";
   popUp.className="jello-horizontal"
-
-  imageDiv?.addEventListener("mouseenter", () => {
+  
+  imageDiv?.addEventListener("mousemove", () => {
     if (!document.body.contains(popUp)) {
       document.body.append(popUp);
-      for(let i =2 ;i< 5 ;i++){
-      const spans=  document.querySelectorAll("span")
-
-      i<spans.length?spans[i].remove():null;
+      
+      for (let i = 2; i < 5; i++) {
+        const spans = document.querySelectorAll("span");
+        i < spans.length ? spans[i].remove() : null;
       }
+  
       setTimeout(() => {
         popUp.remove();
-      }, 900);
+      }, 2000);
     }
   });
   
+  
+  
 
 
-  return isOnline ? (
+  return IsOnline() ? (
     <>
-    <div className='mt-1 animate-pulse  flex  flex-focus:animate-none transition-all hover: text-[#F5AC0E] ' id='profileImg'>
+    <div className='mt-1 animate-pulse  flex  flex-focus:animate-none transition-all  text-[#CC6600] ' id='profileImg'>
     <img src={src}  alt={alt} className={className} />
     <span className='flex flex-col justify-center'>
     <h2 >{name}</h2>

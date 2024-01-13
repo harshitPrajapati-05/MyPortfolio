@@ -29,9 +29,6 @@ body {
     background-color: #1E1E1E;
   }
 
-  .animate-bounce1{
-    animation: bounce .9999s   .09s infinite;
-  }
 
 
 
@@ -43,19 +40,23 @@ body {
   display: flex;
   position: absolute;
   background: #fff;
-  color: black;
+  color:white;
   z-index: 3;
   top: 2.4rem;
   left: 17.1rem;
   font-size: .93rem;
   font-weight: 700;
   border: black 1.2px  solid;
-  
+  backdrop-filter: blur(7px) saturate(115%);
+  -webkit-backdrop-filter: blur(7px) saturate(115%);
+  background-color: rgba(17, 25, 40, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  align-items: center;
 }
 
-#popUp i{
-  font-size: xx-large;
-
+#popUp h1{
+  font-size: x-large;
 }
 
 @keyframes jello-horizontal {
@@ -98,14 +99,30 @@ body{
   to{text-shadow:0px 0px 20px #fff,0px 0px 20px #3a19f7;}
 }
 
-#icons{
+.item{
   animation: glow 1s   infinite alternate ;
+  backdrop-filter: blur(7px) saturate(115%);
+  -webkit-backdrop-filter: blur(7px) saturate(115%);
+  background-color: rgba(17, 25, 40, 0.3);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
 }
 
 #form{
+
   backdrop-filter: blur(7px) saturate(115%);
     -webkit-backdrop-filter: blur(7px) saturate(115%);
     background-color: rgba(17, 25, 40, 0.3);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+
+.glassBox{
+  backdrop-filter: blur(7px) saturate(115%);
+  -webkit-backdrop-filter: blur(7px) saturate(115%);
+  background-color: rgba(17, 25, 40, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
