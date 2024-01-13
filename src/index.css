@@ -64,28 +64,29 @@ body{
   background-image: url("/bg.jpeg");
   background-size: cover;
 }
-@keyframes glow{
-  from{text-shadow:0px 0px 5px #fff,0px 0px 5px #3a19f7 ;}
-  to{text-shadow:0px 0px 20px #fff,0px 0px 20px #3a19f7;}
+  @keyframes glow{
+    from{text-shadow:0px 0px 5px #fff,0px 0px 5px #3a19f7 ;}
+    to{text-shadow:0px 0px 20px #fff,0px 0px 20px #3a19f7;}
+  }
+
+  @keyframes glowasd {
+    from{text-shadow:0px 0px 1px  #CC6600,0px 0px 1px #CC6600;}
+    to{text-shadow:0px 0px 10px #CC6600,0px 0px 20px #fff;}
+  }
+
+.glowasd{
+  animation: glowasd 2s   infinite  alternate-reverse ;
 }
 
-.item{
+.glow{
   animation: glow 1s   infinite alternate ;
-  backdrop-filter: blur(7px) saturate(115%);
-  -webkit-backdrop-filter: blur(7px) saturate(115%);
-  background-color: rgba(17, 25, 40, 0.3);
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  
 
 }
 
 #form{
 
   backdrop-filter: blur(7px) saturate(115%);
-    -webkit-backdrop-filter: blur(7px) saturate(115%);
-    background-color: rgba(17, 25, 40, 0.3);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 
@@ -95,4 +96,14 @@ body{
   background-color: rgba(17, 25, 40, 0.3);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+
+@keyframes ani {
+    from{box-shadow:6px -5px 15px 4px #CC6600, -6px 5px 25px 3px #3a19f7;}
+    100%{box-shadow:6px -5px 15px  3px #3a19f7, -6px 5px 25px 4px #cc6600;}
+  }
+
+.ccc:hover{
+  animation: ani 3s   infinite alternate ease-in-out;
 }

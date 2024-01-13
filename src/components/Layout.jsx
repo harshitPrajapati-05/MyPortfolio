@@ -17,7 +17,7 @@ const Layout = () => {
     
     IsOnline()? 
     <>
-    <Header/><div className='h-screen flex '>
+    <Header/><div className='h-screen flex'>
       {isEmpty()?<Form isOn={true}/>:<Outlet/>}
       </div><Footer/> 
     </>:

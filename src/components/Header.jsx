@@ -25,7 +25,7 @@ const Header = (
     {contexts.map((context ,index)=>(
      <li    key={index} className='mt-1 mx-[1.25rem] text-lg font-mono font-semibold '>
       <NavLink  to={toMaker(`${context}`)}
-      className={({isActive})=>`${isActive? "text-grey glassBox bg-transparent shadow-[1px_1px_15px_1px_rgba(146,46,227,255)]   ":"  item hover:transition-all hover:shadow-[5px_5px_1px_0px_rgba(146,46,227,255)]"}    hover:text-white hover:bg-transparent transition-shadow   flex rounded-lg p-[0.25rem] my-5`}
+      className={({isActive})=>`${isActive? "text-grey glassBox bg-transparent shadow-[1px_1px_15px_1px_rgba(146,46,227,255)]   ":"  glow hover:transition-all hover:shadow-[5px_5px_1px_0px_rgba(146,46,227,255)]"}    hover:text-white hover:bg-transparent transition-shadow   glassBox flex rounded-lg p-[0.25rem] my-5`}
       >@{context}</NavLink>
      </li>
     ))}

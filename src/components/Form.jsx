@@ -25,8 +25,8 @@ const Form = ({isOn=true}) => {
 
   return (isOn?
   <>
-    <Container id={`form`} className='span'>
-      <form  onSubmit={handleSubmit} className='flex flex-col gap-5   items-center '>
+    <Container id={`form`} className='glassBox'>
+      <form  onSubmit={handleSubmit} className='flex flex-col gap-5  items-center '>
         <h1 className='font-bold font-mono text-white' >COMPLETE THE FORM</h1>
         <Input
           type="text"
