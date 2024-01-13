@@ -8,7 +8,10 @@ import {IsOnline} from '../utils'
 const Layout = () => {
   const name= useSelector(s=>s.user.name)
   const isEmpty = React.useCallback(() => name === '', [name])
-  const fireRun =()=> window.location.reload();  
+  document.getElementById("reloadButton")?.addEventListener("click",()=>{
+      window.location.reload()
+  
+  })
   return (
     
     
@@ -19,10 +22,7 @@ const Layout = () => {
       </div><Footer/> 
     </>:
     <div className='bg-black  flex  mt-48  text-white  jus font-mono justify-center  glassBox'>
-    <button onClick={fireRun()}>
-      <h1>YOU ARE OFFLINE </h1>
-      <h2>Click ME </h2>
-    </button>
+    <Button type="" id="reloadButton" name={`CLick me to Refresh `}/>
     </div>
   )
 }

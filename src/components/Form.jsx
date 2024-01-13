@@ -37,7 +37,7 @@ const Form = ({isOn=true}) => {
           max="25"
           isLabel={false}
         />
-        <Button  className='glassBox p-1'type="submit" />
+        <Button  className='glassBox p-1' type="submit" />
       </form>
     </Container>
     </>:null 
