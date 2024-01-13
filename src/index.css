@@ -100,8 +100,8 @@ body{
 
 
 @keyframes ani {
-    from{box-shadow:6px -5px 15px 4px #CC6600, -6px 5px 25px 3px #3a19f7;}
-    100%{box-shadow:6px -5px 15px  3px #3a19f7, -6px 5px 25px 4px #cc6600;}
+    from{box-shadow:6px -5px 20px 3px #CC6600, -6px 5px 20px 3px #3a19f7;}
+    100%{box-shadow:6px -5px 20px  3px #3a19f7, -6px 5px 20px 3px #cc6600;}
   }
 
 .ccc:hover{
