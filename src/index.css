@@ -108,7 +108,16 @@ body{
   animation: ani 3s   infinite alternate ease-in-out;
 }
 
+@keyframes textANI {
+  to{
+    font-size: x-large;
+  }
+  
+}
 
+.textani{
+  animation:  duration timing-function delay iteration-count direction fill-mode;
+}
 
 
 
